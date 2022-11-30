@@ -1,0 +1,8 @@
+/*etiqueta HTML VA DIRECTAMENTE EL NOMBRE 
+CLASES VA CON " . " ADELANTE 
+ID VA CON "#" ADELANTE 
+*/
+
+body{
+    background-color: rgb(24, 104, 77);
+}

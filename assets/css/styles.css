@@ -1,8 +1,29 @@
-/*etiqueta HTML VA DIRECTAMENTE EL NOMBRE 
-CLASES VA CON " . " ADELANTE 
-ID VA CON "#" ADELANTE 
-*/
+/*ETIQUETA HTML VA DIRECTAMENTE EL NOMBRE */
+/*CLASES VA CON " . " ADELANTE */
+/*ID VA CON "#" ADELANTE */
+
 
 body{
+    text-align: center;
+    margin:auto;
     background-color: rgb(24, 104, 77);
+    color:rgb(217, 240, 232); 
+}
+
+#redes{
+    text-align: center;
+    margin: auto;
+}
+ul li{
+    list-style-type: none;
+    margin-left: -3%;
+}
+
+.imgPerfil{
+    border-radius: 100%;
+}
+
+.nombrePerfil{
+    font-size: 5em;
+    
 }

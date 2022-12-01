@@ -10,9 +10,9 @@ import { LogoComponent } from './componentes/logo/logo.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
     HeaderComponent,
-    LogoComponent
+    FooterComponent,
+    LogoComponent 
   ],
   imports: [
     BrowserModule,

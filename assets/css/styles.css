@@ -21,9 +21,24 @@ ul li{
 
 .imgPerfil{
     border-radius: 100%;
+    justify-content: center;
+    display: flex;
+    border-style: solid;
 }
 
 .nombrePerfil{
     font-size: 5em;
-    
+    border-style: solid;
+
+}
+
+.banner{
+    justify-content: center;
+    display: flex;
+    border-style: solid;
+}
+
+.mapa{
+    padding: -10%;
+    border:2% solid black;
 }

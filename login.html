@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/login.css">
+    
+    <title>Portfolio Web Login </title>
+</head>
+<body>
+      <div class="modal">
+        <div class="tab">
+          <input type="radio" id="sign-in" name="options" class="option" checked />
+          <label for="sign-in">Sign in</label>
+      
+          <form action="#" class="form">
+            <p class="float-label">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="Username" />
+            </p>
+            <p class="float-label">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Password" />
+            </p>
+            <p class="toggle">
+              <label for="remember"><input type="checkbox" id="remember" name="remember" /> Remember me</label>
+            </p>
+            <p>
+              <input type="submit" value="Sign me in" />
+            </p>
+            <div class="forgot">
+              <a href="#">Forgot your password?</a>
+            </div>
+          </form>
+        </div>
+      
+        <div class="tab">
+          <input type="radio" id="sign-up" name="options" class="option" />
+          <label for="sign-up">Sign up</label>
+      
+          <form action="#" class="form">
+            <p class="float-label">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" />
+            </p>
+            <p class="float-label">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Password" />
+            </p>
+            <p class="float-label">
+              <label for="confirm-password">Confirm password</label>
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" />
+            </p>
+            <p class="toggle">
+              <label for="accept"><input type="checkbox" id="accept" name="accept" /> I accept the <a href="#">Terms &amp; Services</a></label>
+            </p>
+            <p>
+              <input type="submit" value="Sign me up" />
+            </p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #9fc;
+}
+.modal {
+    background-color: #fff;
+    width: 400px;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-height: 420px;
+}
+.tab {
+    float: left;
+}
+.tab:first-of-type {
+    margin-right: 15px;
+}
+.option {
+    display: none;
+}
+.option + label {
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    color: #bbb;
+    padding: 0 0 3px 0;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+.option:checked + label {
+    color: #000;
+    border-bottom: 3px solid #000;
+}
+.option:checked ~ .form {
+    display: block;
+}
+.form {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: calc(100% - 60px);
+    transform: translateY(calc(-50% + 35px));
+}
+.form p {
+    position: relative;
+    margin-bottom: 30px;
+}
+.float-label input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 3px solid #000;
+}
+.float-label input:focus {
+    border-bottom: 3px solid #9fc;
+}
+.float-label label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+.float-label label.show {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+.toggle input {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #000;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.toggle input:focus {
+    border: 3px solid #9fc;
+}
+.toggle input:checked {
+    background-color: #9fc;
+}
+.toggle label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+button, input[type="submit"] {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+}
+input[type="submit"] {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 15px 30px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #000;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+    color: #000;
+    background-color: #9fc;
+}
+input:focus, button:focus {
+    outline: none;
+}
+.forgot {
+    text-align: center;
+}
+.forgot a {
+    display: inline-block;
+    padding-bottom: 3px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+}
+a:hover, a:focus {
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #000;
+}
+:-moz-placeholder {
+   /* older Firefox*/
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #000;
+}
+::-moz-placeholder {
+   /* Firefox 19+ */
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #000;
+}
+:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #000;
+}

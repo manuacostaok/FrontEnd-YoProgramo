@@ -3,11 +3,20 @@ a{
     text-decoration: none;
     
 }
+p{
+    color: rgb(226, 157, 9);
+}
 
 .btn{
-    width: 30rem;
-    background-color: green;
-}
+    font-size:10px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:white;
+    background:#638cb5;
+    border:0px;
+    width:100px;
+    height: 30px;
+   }
 
 
 .fondo{

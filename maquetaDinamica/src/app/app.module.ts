@@ -19,6 +19,7 @@ import { LogoutComponent } from './componentes/logout/logout.component';
 import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
+import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.compon
     LogoutComponent,
     ModalLoginComponent,
     BannerComponent,
-    ModalLogoutComponent 
+    ModalLogoutComponent,
+    ModalEditarImgComponent 
   ],
   imports: [
     BrowserModule,

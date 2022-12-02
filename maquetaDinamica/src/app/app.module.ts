@@ -18,6 +18,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
 import { BannerComponent } from './componentes/banner/banner.component';
+import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BannerComponent } from './componentes/banner/banner.component';
     LoginComponent,
     LogoutComponent,
     ModalLoginComponent,
-    BannerComponent 
+    BannerComponent,
+    ModalLogoutComponent 
   ],
   imports: [
     BrowserModule,

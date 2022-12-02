@@ -17,6 +17,7 @@ import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
+import { BannerComponent } from './componentes/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ModalLoginComponent } from './modales/modal-login/modal-login.component
     SobreMiComponent,
     LoginComponent,
     LogoutComponent,
-    ModalLoginComponent 
+    ModalLoginComponent,
+    BannerComponent 
   ],
   imports: [
     BrowserModule,

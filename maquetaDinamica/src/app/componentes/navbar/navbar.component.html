@@ -3,15 +3,19 @@
       <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar" target="_blank">
         <app-header></app-header> 
         </a>
-            <button class="btn section" >Mostrate/Ocultate</button>
-
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item"><i class="fa-brands fa-linkedin"></i></li>
-                    <li class="list-group-item"><i class="fa-brands fa-github"></i></li>
+            
+            <button class="btn section" (click)="mostrate()" >Mostrate/Ocultate</button>
+                <ul class="navbar-nav">
+                  
                     
-
-                    <app-login></app-login>
-                    <app-logout></app-logout>
+                      
+                    
+                              
+                    <app-login *ngIf="!mostrar"></app-login>
+                    <app-logout *ngIf="mostrar"></app-logout>
+                    
+                  
                 </ul>
+                
     </div>
   </nav>

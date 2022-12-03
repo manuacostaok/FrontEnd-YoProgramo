@@ -22,7 +22,6 @@ import { BannerComponent } from './componentes/banner/banner.component';
 import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
 import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
 import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +41,8 @@ import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
     ModalLoginComponent,
     BannerComponent,
     ModalLogoutComponent,
-    ModalEditarImgComponent 
+    ModalEditarImgComponent,
+    TrabajosComponent 
   ],
   imports: [
     BrowserModule,

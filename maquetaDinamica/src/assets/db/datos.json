@@ -1,25 +1,30 @@
 {  
-    "nombre":"",
-    "apellido":"",
-    "edad":"",
+    "nombre":"Manunaki",
+    "apellido":"Acosta",
+    "edad":"27",
     
 
 
 
-    "experiencias":[
-    {
-        "id": 1,
-        "logoEmpresa":"", 
-        "url":"",
-        "puesto":"",
-        "inicio":"",
-        "fin":"",
-        "descripcion":""
-    }
-    ],
-    "estudios":[
+    
+    "trabajos":[
         {
-
+        "id": 1,
+        "titulo":"Cultivador", 
+        "institucion":"el jardin del eden",
+        "imagen":"/../assets/img/GorilaVerde.jpg",
+        "inicio":"33-33-2013",
+        "fin":"99-99-9999",
+        "descripcion":"indica o sativa"
+        },
+        {
+        "id": 2,
+        "titulo":"Tester", 
+        "institucion":"la cosecha del eden",
+        "imagen":"../assets/img/GorilaVerde.jpg",
+        "inicio":"33-33-2013",
+        "fin":"99-99-9999",
+        "descripcion":"catando las mejores"
         }
     ]
 }

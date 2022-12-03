@@ -1,0 +1,25 @@
+{  
+    "nombre":"",
+    "apellido":"",
+    "edad":"",
+    
+
+
+
+    "experiencias":[
+    {
+        "id": 1,
+        "logoEmpresa":"", 
+        "url":"",
+        "puesto":"",
+        "inicio":"",
+        "fin":"",
+        "descripcion":""
+    }
+    ],
+    "estudios":[
+        {
+
+        }
+    ]
+}

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
@@ -20,6 +21,7 @@ import { ModalLoginComponent } from './modales/modal-login/modal-login.component
 import { BannerComponent } from './componentes/banner/banner.component';
 import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
 import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
+import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

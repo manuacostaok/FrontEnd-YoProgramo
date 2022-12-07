@@ -1,29 +1,31 @@
-<section id="experiencia" class="border">
-    <h2 class="text-center mt-4 pb"> Experiencia laboral </h2>
-    <div class="row">
-        <div class="col-4">
-          <div id="list-example" class="list-group">
-            <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-          </div>
-        </div>
-        <div class="col-8">
-          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-            <h4 id="list-item-1">Item 1</h4>
-            <p>Item 1
-                This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
-                
-                Item 2
-                This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-            <h4 id="list-item-2">Item 2</h4>
-            <p>...</p>
-            <h4 id="list-item-3">Item 3</h4>
-            <p>...</p>
-            <h4 id="list-item-4">Item 4</h4>
-            <p>...</p>
-          </div>
-        </div>
+<section id="trabajos" class="trabajos text white">
+  <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent">
+      <div class="row mb-2">
+              <div class="col-auto me-auto mt-2">
+                  <h3>Trabajos {{nombrecito}}
+                       <a href="#top"><button type="button" class="btn btn-close-white"><i class="fa-solid fa-arrow-turn-up"></i></button></a>
+                  </h3>
+              </div>
+              <div class="d-flex col-auto mt-2">
+                  <button type="submit" class="btn btn-close-white"><i class="fa-solid fa-plus"></i></button>
+              </div>
       </div>
+      <div class="row" *ngFor="let trabajito of trabajitos">
+          <div class="col-3">
+              <img [src]="trabajito.imagen" alt="">
+              <h4>{{trabajito.titulo}}</h4>
+              <h4>{{trabajito.institucion}}</h4>
+              <h4>{{trabajito.inicio}}/{{trabajito.fin}}</h4>
+          </div>
+          <div class="col-8">
+              <h4>{{trabajito.descripcion}}</h4>
+          </div>
+          <div class="col-1">
+                  <!--button triger modal aca!!!!-->
+
+          </div>
+          <br><hr class="col-11">
+      </div>
+  
+  </div>
 </section>

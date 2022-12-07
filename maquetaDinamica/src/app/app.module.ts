@@ -21,7 +21,7 @@ import { ModalLoginComponent } from './modales/modal-login/modal-login.component
 import { BannerComponent } from './componentes/banner/banner.component';
 import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
 import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
-import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +41,7 @@ import { TrabajosComponent } from './componentes/trabajos/trabajos.component';
     ModalLoginComponent,
     BannerComponent,
     ModalLogoutComponent,
-    ModalEditarImgComponent,
-    TrabajosComponent 
+    ModalEditarImgComponent
   ],
   imports: [
     BrowserModule,

@@ -8,3 +8,19 @@
     width:200px;
     height: 30px;
    }
+   @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Work Sans Light'), local('WorkSans-Light'), url(https://fonts.gstatic.com/s/worksans/v2/FD_Udbezj8EHXbdsqLUpl3hCUOGz7vYGh680lGh-uXM.woff) format('woff')
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  @keyframes charge {
+    from {transform: translateY(2rem);opacity: 0}
+    to {transform: translateY(0);opacity: 1}
+  }

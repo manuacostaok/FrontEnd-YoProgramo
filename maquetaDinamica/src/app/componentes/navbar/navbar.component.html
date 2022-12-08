@@ -3,20 +3,21 @@
       <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar" target="_blank">
         <app-header></app-header> 
         </a>
-            
+        <a href='https://github.com/manuacostaok' target='_blank'>
+          <i class='fab fa-github'></i>
+        </a>
+        <a href='https://www.linkedin.com/in/manuel-acosta-a1a238214/' target='_blank'>
+          <i class='fab fa-linkedin'></i>
+        </a>
             <button class="btn section" (click)="mostrate()" >Mostrate/Ocultate</button>
                 <ul class="navbar-nav">
-                  
                     
-                      
-                    
-                              
                     <app-login *ngIf="!mostrar"></app-login>
                     <app-logout *ngIf="mostrar"></app-logout>
-                    
-                    
                   
                 </ul>
                 
+                
+                  
     </div>
   </nav>

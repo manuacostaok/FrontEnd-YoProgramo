@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #111;
+}
+h1 {
+    text-align: center;
+    
+}
+.circular-progress {
+    margin: auto;
+    position: relative;
+}
+.circular-progress, .circular-progress:before, .circular-progress:after {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+.circular-progress:before, .circular-progress:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.circular-progress:before {
+    padding: 0.5em;
+    box-sizing: border-box;
+    font-size: 2rem;
+    line-height: 8rem;
+}
+.circular-progress:after {
+    line-height: 13rem;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+}
+.html {
+    transform: rotate(126deg);
+    background: linear-gradient(0deg, orange 50%, rgba(255, 165, 0, .2) 50%);
+}
+.html:before, .html:after {
+    color: orange;
+}
+.html:before {
+    content: "html5";
+    background: #111 content-box;
+    text-transform: uppercase;
+    transform: rotate(-126deg);
+}
+.html:after {
+    content: "70%";
+    background: linear-gradient(transparent 50%, #111 50%);
+    transform: scale(1.1) rotate(-126deg);
+}
+.php {
+    transform: rotate(108deg);
+    background: linear-gradient(0deg, #e600e6 50%, rgba(230, 0, 230, .2) 50%);
+}
+.php:before, .php:after {
+    color: #e600e6;
+}
+.php:before {
+    content: "php";
+    background: #111 content-box;
+    text-transform: uppercase;
+    transform: rotate(-108deg);
+}
+.php:after {
+    content: "60%";
+    background: linear-gradient(transparent 50%, #111 50%);
+    transform: scale(1.1) rotate(-108deg);
+}
+.css {
+    transform: rotate(144deg);
+    background: linear-gradient(0deg, #4d4dff 50%, rgba(77, 77, 255, .2) 50%);
+}
+.css:before, .css:after {
+    color: #4d4dff;
+}
+.css:before {
+    content: "css";
+    background: #111 content-box;
+    text-transform: uppercase;
+    transform: rotate(-144deg);
+}
+.css:after {
+    content: "80%";
+    background: linear-gradient(transparent 50%, #111 50%);
+    transform: scale(1.1) rotate(-144deg);
+}
+.js {
+    transform: rotate(117deg);
+    background: linear-gradient(0deg, yellow 50%, rgba(255, 255, 0, .2) 50%);
+}
+.js:before, .js:after {
+    color: yellow;
+}
+.js:before {
+    content: "js";
+    background: #111 content-box;
+    text-transform: uppercase;
+    transform: rotate(-117deg);
+}
+.js:after {
+    content: "65%";
+    background: linear-gradient(transparent 50%, #111 50%);
+    transform: scale(1.1) rotate(-117deg);
+}
+.c {
+    transform: rotate(27deg);
+    background: linear-gradient(0deg, #fff 50%, rgba(255, 255, 255, .2) 50%);
+}
+.c:before, .c:after {
+    color: #fff;
+}
+.c:before {
+    content: "C";
+    background: #111 content-box;
+    text-transform: uppercase;
+    transform: rotate(-27deg);
+}
+.c:after {
+    content: "15%";
+    background: linear-gradient(transparent 50%, #111 50%);
+    transform: scale(1.1) rotate(-27deg);
+}

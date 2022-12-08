@@ -2,7 +2,7 @@
   <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent">
       <div class="row mb-2">
               <div class="col-auto me-auto mt-2">
-                  <h3>Trabajos {{nombrecito}}
+                  <h3>Experiencia laboral de {{nombrecito}}
                        <a href="#top"><button type="button" class="btn btn-close-white"><i class="fa-solid fa-arrow-turn-up"></i></button></a>
                   </h3>
               </div>
@@ -12,7 +12,7 @@
       </div>
       <div class="row" *ngFor="let trabajito of trabajitos">
           <div class="col-3">
-              <img [src]="trabajito.imagen" alt="">
+              <img [src]="trabajito.imagen" class="img-thumbnail" alt="">
               <h4>{{trabajito.titulo}}</h4>
               <h4>{{trabajito.institucion}}</h4>
               <h4>{{trabajito.inicio}}/{{trabajito.fin}}</h4>

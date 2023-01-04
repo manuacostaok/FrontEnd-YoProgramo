@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/servicios/datos.service';
+import { Experiencia } from 'src/app/entidades/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -7,15 +8,32 @@ import { DatosService } from 'src/app/servicios/datos.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit{
-trabajitos:any=[]; //instanciamos las variables para usarlas en el metedo ngOnInit
-nombrecito:string='';
-  constructor(private datos:DatosService){ }
-  ngOnInit(): void{
-    this.datos.getDatos().subscribe(data =>{
-      this.trabajitos=data.trabajos;
-      this.nombrecito=data.nombre;
-    })
+  experiencias: Experiencia[]=[];
+  idEditar : number | undefined;
+
+constructor(private servExp:ExperienciaService){}
+  ngOnInit(): void {
+    this.cargarExperiencia();
   }
 
+  public cargarExperiencia():void{
+    this.servExp.lista().subscribe(data =>(this.experiencias=data));
+  }
+
+  idEdit(id:number){
+    this.idEditar=id
+  }
+
+  delete(id:number){
+    if(id!=undefined){
+      this.servExp.borrar(id).subscribe(
+        data=>{
+          this.cargarExperiencia();
+        },err=>{
+          alert("no se pudo eliminar la experiencia")
+        })
+
+      }
+  }
 }
 

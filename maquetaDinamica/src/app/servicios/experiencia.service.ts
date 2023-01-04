@@ -11,7 +11,7 @@ export class ExperienciaService {
 
   constructor(private httpClient:HttpClient)  {}
 
-  public List(): Observable <Experiencia[]>{
+  public lista(): Observable <Experiencia[]>{
     return this.httpClient.get<Experiencia[]>(this.url + 'lista')
   }
   public getById(id: number): Observable<Experiencia>{

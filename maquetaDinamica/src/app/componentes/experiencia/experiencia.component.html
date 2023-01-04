@@ -1,25 +1,27 @@
 <section id="experiencia" class="trabajos text white">
   <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent">
+    <h2 class="text-center mt-4 pb"> Experiencia </h2>
       <div class="row mb-2">
               <div class="col-auto me-auto mt-2">
-                  <h3>Experiencia laboral de {{nombrecito}}
-                       <a href="#top"><button type="button" class="btn btn-close-white"><i class="fa-solid fa-arrow-turn-up"></i></button></a>
+                  <h3>Experiencia laboral: 
+                      
                   </h3>
               </div>
               <div class="d-flex col-auto mt-2">
-                  <button type="submit" class="btn btn-close-white"><i class="fa-solid fa-plus"></i></button>
+                  <app-add-exp></app-add-exp>
+                  <button type="submit" class="btn btn-close-white"><i class="fa-solid fa-pen-to-square"></i></button>
               </div>
       </div>
-      <div class="row" *ngFor="let trabajito of trabajitos">
+      <div class="row" *ngFor="let experiencia of experiencias">
           <div class="col-3">
-              <img [src]="trabajito.imagen" class="img-thumbnail" alt="">
-              <h4>{{trabajito.titulo}}</h4>
-              <h4>{{trabajito.institucion}}</h4>
-              <h4>{{trabajito.inicio}}/{{trabajito.fin}}</h4>
+              <img [src]="experiencia.imagen" class="img-thumbnail" alt="">
+              <h4>{{experiencia.puesto}}</h4>
+              <h4>{{experiencia.empresa}}</h4>
+              <h4>{{experiencia.inicio}}/{{experiencia.fin}}</h4>
               <br>
           </div>
           <div class="col-8">
-              <h3>{{trabajito.descripcion}}</h3>
+              <h3>{{experiencia.descripcion}}</h3>
           </div>
           <div class="col-1">
                   <!--button triger modal aca!!!!-->

@@ -22,7 +22,10 @@ import { BannerComponent } from './componentes/banner/banner.component';
 import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
 import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
 import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sobre-mi.component';
-
+import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
+import { AddExpComponent } from './componentes/add-exp/add-exp.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,12 +46,16 @@ import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sob
     BannerComponent,
     ModalLogoutComponent,
     ModalEditarImgComponent,
-    EditarSobreMiComponent
+    EditarSobreMiComponent,
+    ModalAgregarExpComponent,
+    AddExpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

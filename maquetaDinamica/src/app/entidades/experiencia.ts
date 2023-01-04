@@ -1,5 +1,4 @@
 export class Experiencia {
-
     id!:number;
     puesto : string;
     inicio : string;

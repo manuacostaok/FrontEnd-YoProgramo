@@ -9,35 +9,37 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ModalAgregarExpComponent implements OnInit {
 
-    registerForm!: FormGroup;
-    submitted = false;
+    contactForm!: FormGroup;
 
-    constructor(private formBuilder: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder) { }
 
-    ngOnInit() {
-        this.registerForm = this.formBuilder.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            email: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required, Validators.minLength(6)]],
-            confirmPassword: ['', Validators.required]
-        }, {
-            
-        });
-    }
+  ngOnInit(): void {
+    this.contactForm = this.initForm();
+    // this.onPathValue();
+    // this.onSetValue();
+  }
 
-    // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
+  onPathValue(): void {
+    this.contactForm.patchValue({ name: 'Bezael' });
+  }
 
-    onSubmit() {
-        this.submitted = true;
+  onSetValue(): void {
+    // this.contactForm.setValue({ comment: 'Hola mundo' });
+  }
 
-        // stop here if form is invalid
-        if (this.registerForm.invalid) {
-            return;
-        }
+  onSubmit(): void {
+    console.log('Form ->', this.contactForm.value);
+  }
 
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
-    }
+  initForm(): FormGroup {
+    return this.fb.group({
+      puesto: ['', [Validators.required, Validators.minLength(3)]],
+      empresa: ['', [Validators.required]],
+      checkActual: [''],
+      descripcion: ['', [Validators.required]],
+      inicio: ['', [Validators.required]],
+      fin: ['', [Validators.required]],
+    })
+  }
     
 }

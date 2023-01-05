@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Experiencia } from 'src/app/entidades/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 
 @Component({
@@ -8,38 +10,62 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./modal-agregar-exp.component.css']
 })
 export class ModalAgregarExpComponent implements OnInit {
+    form: FormGroup;
+    puesto:string="";
+    empresa:string="";
+    inicio:string="";
+    fin:string="";
+    descripcion:string="";
+    imagen:string="";
+    url:string="";
+    esTrabajoActual:boolean=false;
+    personaid:number=1;
 
-    contactForm!: FormGroup;
+  constructor(private readonly fb: FormBuilder,private expServ: ExperienciaService) 
+  {
+    this.form= this.fb.group({
+      puesto:['',[Validators.required]],
+      inicio:[''],
+      fin:[''],
+      descripcion:['',[Validators.required]],
+      imagen:[''],
+      url:[''],
+      empresa:[''],
+      esTrabajoActual :[''],     
+      personaid:[1],
+   })
+   }
+  
 
-  constructor(private readonly fb: FormBuilder) { }
-
+  
   ngOnInit(): void {
-    this.contactForm = this.initForm();
-    // this.onPathValue();
-    // this.onSetValue();
   }
 
-  onPathValue(): void {
-    this.contactForm.patchValue({ name: 'Bezael' });
+  get Puesto(){
+    return this.form.get("puesto");
   }
 
-  onSetValue(): void {
-    // this.contactForm.setValue({ comment: 'Hola mundo' });
+  get Descripcion(){
+    return this.form.get("descripcion");
   }
+  
+  onCreate(): void{
+    this.expServ.crear(this.form.value).subscribe(data=>{alert("Experiencia Añadida")
+    window.location.reload();
+  });
+}
 
-  onSubmit(): void {
-    console.log('Form ->', this.contactForm.value);
-  }
+limpiar(): void{
+  this.form.reset();
+}
 
-  initForm(): FormGroup {
-    return this.fb.group({
-      puesto: ['', [Validators.required, Validators.minLength(3)]],
-      empresa: ['', [Validators.required]],
-      checkActual: [''],
-      descripcion: ['', [Validators.required]],
-      inicio: ['', [Validators.required]],
-      fin: ['', [Validators.required]],
-    })
+onEnviar(event:Event){
+  event.preventDefault;
+  if(this.form.valid){
+    this.onCreate();
+  }else{
+    alert("falló en la carga, intente nuevamente");
+    this.form.markAllAsTouched();
   }
-    
+}
 }

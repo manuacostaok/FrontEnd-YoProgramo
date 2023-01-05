@@ -9,31 +9,29 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit{
   experiencias: Experiencia[]=[];
-  idEditar : number | undefined;
+  idEditar! : number ;
 
 constructor(private servExp:ExperienciaService){}
   ngOnInit(): void {
     this.cargarExperiencia();
   }
 
-  public cargarExperiencia():void{
-    this.servExp.lista().subscribe(data =>(this.experiencias=data));
+  
+  cargarExperiencia():void{
+    this.servExp.lista().subscribe(data => {this.experiencias=data});    
   }
 
-  idEdit(id:number){
-    this.idEditar=id
-  }
 
   delete(id:number){
-    if(id!=undefined){
+    if(id != undefined){
       this.servExp.borrar(id).subscribe(
-        data=>{
+        data =>{
+          alert("Experiencia eliminada correctamente")
           this.cargarExperiencia();
-        },err=>{
+        }, err =>{
           alert("no se pudo eliminar la experiencia")
         })
-
-      }
-  }
+    }}
+  
 }
 

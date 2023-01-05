@@ -1,76 +1,58 @@
-<div class="modal" id="modalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Experiencia -->
+<div class="modal fade" id="experienciaModalAdd" tabindex="-1" aria-labelledby="experienciaModalAdd" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title" id="modalAdd">Agregar Experiencia </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="experienciaModalAdd">Agregar Experiencia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaFormAdd"> 
+            <!-- formulario de experiencia-->
         <div class="modal-body">
-            <div class="login-box">
-                <h2>Nueva experiencia</h2>
-                <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
-                <div class="mb-4">
-                    <label for="puesto" class="form-label">Puesto</label>
-                    <input type="text" class="form-control" id="puesto" name="puesto" required formControlName="puesto">
-                    <div *ngIf="contactForm.get('puesto')?.touched && contactForm.get('puesto')?.errors?.['required']"
-                    class="alert alert-danger">This field is required.</div>
-                    <div *ngIf="contactForm.get('puesto')?.touched && contactForm.get('puesto')?.errors?.['minlength']"
-                    class="alert alert-danger">puesto must be longer than
-                    {{ contactForm.get('puesto')?.errors?.['minlength']?.requiredLength}} characters.</div>
+                <div class="mb-3">
+                  <label for="imagen" class="form-label">Agregar Logo de Empresa</label>
+                  <input class="form-control" type="url"  formControlName="imagen" placeholder="Ingrese URL">
                 </div>
-                
-                <div class="mb-4">
-                    <label for="empresa" class="form-label">Empresa</label>
-                    <input type="text" class="form-control" name="empresa" id="empresa" formControlName="empresa">
+                <div class="mb-3">
+                  <label for="empresa" class="form-label">Agregar Empresa</label>
+                  <input type="text" class="form-control"  formControlName="empresa" placeholder="Empresa nueva">
                 </div>
-                <div class="mb-4">
-                    <label for="descripcion" class="form-label">Descripcion</label>
-                    <textarea class="form-control" name="descripcion" id="descripcion" rows="4" placeholder="Deja una descripcion de tu puesto, tu experiencia, o lo que desees contar......"
-                    formControlName="descripcion" required></textarea>
-                    <div *ngIf="contactForm.get('descripcion')?.touched && contactForm.get('descripcion')?.errors?.['required']"
-                    class="alert alert-danger">This field is required.</div>
+                <div class="mb-3">
+                  <label for="url" class="form-label">Agregar URL de Empresa</label>
+                  <input type="url" class="form-control"   formControlName="url" placeholder="Ingrese URL" >
+                </div>
+                <div class="mb-3">
+                  <label for="puesto" class="form-label">Agregar Cargo</label>
+                  <input type="text" class="form-control"    placeholder="Ingrese cargo" formControlName="puesto" >
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="inicio" class="form-label">Agregar Periodo Inicio</label>
+                  <input type="date" class="form-control"    formControlName="inicio">
+                </div>
+                <div class="mb-3">
+                  <label for="fin" class="form-label">Agregar Periodo Fin</label>
+                  <input type="date" class="form-control"  formControlName="fin"> 
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Agregar Información de Cargo</label>
+                    <textarea class="form-control"   rows="3" formControlName="descripcion" ></textarea>
                     
                 </div>
-                <div class="mb-4 form-check">
-                    <label for="checkActual" class="form-label">¿Es trabajo actual?</label>
-                    <input type="checkbox" class="form-check-input" id="checkActual" name="checkActual" formControlName="checkActual"
-                    required>
-                    <div *ngIf="contactForm.get('checkActual')?.touched && contactForm.get('checkActual')?.errors?.['required']"
-                    class="alert alert-danger">This field is required.</div>
+                <div class="form-check form-switch">
+                  <label class="form-check-label" for="esTrabajoActual">Es trabajo actual</label>
+                  <input class="form-check-input" type="checkbox" role="switch"   formControlName="esTrabajoActual">
                 </div>
-                <div style="display: flex;
-                justify-content: space-between;
-                align-items: center;">
-                <div class="mb-4">
-                    <label for="inicio" class="form-label">Inicio</label>
-                    <input type="date" name="inicio" id="inicio"
-                    formControlName="inicio" required>
-                    <div *ngIf="contactForm.get('inicio')?.touched && contactForm.get('inicio')?.errors?.['required']"
-                    class="alert alert-danger">This field is required.</div>
-                    
+                <div >
+                  <input type="hidden" formControlName="personaid">
                 </div>
-                <div class="mb-4">
-                    <label for="fin" class="form-label">Fin</label>
-                    <input type="date" name="fin" id="fin"
-                    formControlName="fin" required>
-                    <div *ngIf="contactForm.get('fin')?.touched && contactForm.get('fin')?.errors?.['required']"
-                    class="alert alert-danger">This field is required.</div>
-                    
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+                  <button type="submit" class="btn btnLogin">Agregar</button>          
                 </div>
-                </div>
-                <div class="user-box">
-                    <label>Imagen</label>
-                    <input type="url" name="" required="">    
-                </div>
-                
-                </form>  
-                <p>¡ATENCIÓN! El boton Guardar permanecerá bloqueado si los campos no se rellenan correctamente</p>
-            </div>
-            <div class="modal-footer">
-            <div class="d-grid row-2 float-end">
-                <button type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Guardar experiencia</button>
-            </div>
-            </div>
+
+            </form>
       </div>
     </div>
   </div>

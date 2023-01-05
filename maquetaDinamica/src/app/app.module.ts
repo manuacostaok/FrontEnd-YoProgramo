@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './componentes/footer/footer.component';
@@ -24,8 +27,8 @@ import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar
 import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sobre-mi.component';
 import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
 import { AddExpComponent } from './componentes/add-exp/add-exp.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
+import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
+import { AddProyComponent } from './componentes/add-proy/add-proy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,14 +51,17 @@ import { FormsModule } from '@angular/forms';
     ModalEditarImgComponent,
     EditarSobreMiComponent,
     ModalAgregarExpComponent,
-    AddExpComponent
+    AddExpComponent,
+    ModalProyectosAddComponent,
+    AddProyComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

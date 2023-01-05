@@ -1,3 +1,9 @@
-#logo{
+#logoAP{
     filter: invert();
+    width: auto;
+    height: auto;
+}
+
+#logoAP2{
+    width: 100px;
 }

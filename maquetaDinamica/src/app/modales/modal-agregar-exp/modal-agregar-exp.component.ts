@@ -10,20 +10,11 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
   styleUrls: ['./modal-agregar-exp.component.css']
 })
 export class ModalAgregarExpComponent implements OnInit {
-    form: FormGroup;
-    puesto:string="";
-    empresa:string="";
-    inicio:string="";
-    fin:string="";
-    descripcion:string="";
-    imagen:string="";
-    url:string="";
-    esTrabajoActual:boolean=false;
-    personaid:number=1;
-
-  constructor(private readonly fb: FormBuilder,private expServ: ExperienciaService) 
-  {
-    this.form= this.fb.group({
+  form:FormGroup;
+  
+  constructor(private formBuilder: FormBuilder, private sExperiencia: ExperienciaService) {
+     //Creamos el grupo de controles para el formulario 
+     this.form= this.formBuilder.group({
       puesto:['',[Validators.required]],
       inicio:[''],
       fin:[''],
@@ -35,9 +26,7 @@ export class ModalAgregarExpComponent implements OnInit {
       personaid:[1],
    })
    }
-  
 
-  
   ngOnInit(): void {
   }
 
@@ -48,24 +37,30 @@ export class ModalAgregarExpComponent implements OnInit {
   get Descripcion(){
     return this.form.get("descripcion");
   }
-  
+ 
   onCreate(): void{
-    this.expServ.crear(this.form.value).subscribe(data=>{alert("Experiencia Añadida")
-    window.location.reload();
-  });
-}
-
-limpiar(): void{
-  this.form.reset();
-}
-
-onEnviar(event:Event){
-  event.preventDefault;
-  if(this.form.valid){
-    this.onCreate();
-  }else{
-    alert("falló en la carga, intente nuevamente");
-    this.form.markAllAsTouched();
+      this.sExperiencia.crear(this.form.value).subscribe(
+        data=>{
+          window.location.reload();
+          alert("Experiencia Añadida")
+    });
   }
-}
+
+  //, err =>{
+  //  alert("no se pudo eliminar la experiencia")
+  //}
+  
+  limpiar(): void{
+    this.form.reset();
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if(this.form.valid){
+      this.onCreate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
+  }
 }

@@ -26,9 +26,10 @@ import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.compon
 import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
 import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sobre-mi.component';
 import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
-import { AddExpComponent } from './componentes/add-exp/add-exp.component';
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
-import { AddProyComponent } from './componentes/add-proy/add-proy.component';
+import { SocialComponent } from './componentes/social/social.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,17 +52,15 @@ import { AddProyComponent } from './componentes/add-proy/add-proy.component';
     ModalEditarImgComponent,
     EditarSobreMiComponent,
     ModalAgregarExpComponent,
-    AddExpComponent,
     ModalProyectosAddComponent,
-    AddProyComponent
+    SocialComponent
   ],
   imports: [
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

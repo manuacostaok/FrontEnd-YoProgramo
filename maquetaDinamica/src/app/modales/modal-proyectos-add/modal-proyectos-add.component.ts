@@ -19,7 +19,7 @@ export class ModalProyectosAddComponent implements OnInit {
       descripcion:['',[Validators.required]],
       imagen:[''],
       url:[''],
-      personaid:[1],
+      personaid:[],
    })
    }
 

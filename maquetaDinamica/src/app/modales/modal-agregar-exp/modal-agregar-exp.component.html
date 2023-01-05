@@ -6,7 +6,8 @@
           <h5 class="modal-title" id="experienciaModalAdd">Agregar Experiencia</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaFormAdd"> 
+        <form  (ngSubmit)="onEnviar($event)" name="experienciaFormAdd"> 
+        <div [formGroup]="form">
             <!-- formulario de experiencia-->
         <div class="modal-body">
                 <div class="mb-3">
@@ -23,7 +24,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="puesto" class="form-label">Agregar Cargo</label>
-                  <input type="text" class="form-control"    placeholder="Ingrese cargo" formControlName="puesto" >
+                  <input type="text" class="form-control"    placeholder="Ingrese cargo" formControlName="puesto" required>
                   
                 </div>
                 <div class="mb-3">
@@ -36,7 +37,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Agregar Información de Cargo</label>
-                    <textarea class="form-control"   rows="3" formControlName="descripcion" ></textarea>
+                    <textarea class="form-control"   rows="3" formControlName="descripcion" required></textarea>
                     
                 </div>
                 <div class="form-check form-switch">
@@ -51,8 +52,9 @@
                   <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
                   <button type="submit" class="btn btnLogin">Agregar</button>          
                 </div>
-
+              </div>
             </form>
+            
       </div>
     </div>
   </div>

@@ -17,6 +17,8 @@
     background-color: #a1b5cb;
     text-align: center;
    }
+   
+   
 
    @media(min-width:576px){
     #fotoPerfil{
@@ -28,8 +30,23 @@
         top: 500px;
     }
    }
-
+   @media(max-width:575px){
+    #fotoPerfil{
+        position: absolute;
+        width: 34%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 33%;
+        top: 300px;
+    }
+   }
    #fotoPerfil{
     font-weight: bold;
     margin-top: 30%;
+   }
+
+   #nombrePerfil{
+    font-weight: bold;
+    margin-top: 40%;
+    margin-left: 10px;
    }

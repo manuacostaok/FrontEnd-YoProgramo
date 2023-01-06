@@ -27,7 +27,7 @@ import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar
 import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sobre-mi.component';
 import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
-import { SocialComponent } from './componentes/social/social.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 @NgModule({
@@ -52,8 +52,7 @@ import { SocialComponent } from './componentes/social/social.component';
     ModalEditarImgComponent,
     EditarSobreMiComponent,
     ModalAgregarExpComponent,
-    ModalProyectosAddComponent,
-    SocialComponent
+    ModalProyectosAddComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -61,6 +60,12 @@ import { SocialComponent } from './componentes/social/social.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgCircleProgressModule.forRoot({radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,})
   ],
   providers: [],
   bootstrap: [AppComponent]

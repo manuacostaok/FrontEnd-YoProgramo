@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-a{
-    text-decoration: none;
-    
-}
+
 p{
     color: rgb(15, 11, 1);
 }
@@ -13,8 +10,12 @@ p{
     font-weight:bold;
     color:white;
     background:#638cb5;
-    border:0px;
+    border-width: medium;
     width:100px;
     height: 30px;
+   }
+
+   body{
+    background-color: #a1b5cb;
    }
    

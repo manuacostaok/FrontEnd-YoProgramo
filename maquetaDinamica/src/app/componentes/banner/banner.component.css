@@ -2,3 +2,7 @@ img{
     width: auto;
     height: auto;
 }
+
+.img-thumbnail{
+    padding: 0em;
+}

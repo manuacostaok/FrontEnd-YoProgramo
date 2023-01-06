@@ -24,3 +24,10 @@
     from {transform: translateY(2rem);opacity: 0}
     to {transform: translateY(0);opacity: 1}
   }
+  .row{
+    background-color: #a1b5cb;
+  }
+
+  .navbar{
+    padding: 0; 
+  }

@@ -8,7 +8,7 @@ export class Experiencia {
     url : string;
     empresa : string;
     esTrabajoActual : boolean;
-    personaId : number;
+    personaid : number;
 
     constructor(puesto:string, inicio: string, fin: string, descripcion:string, imagen:string, url:string, empresa:string, esTrabajoActual:boolean, personaid : number) {
         this.puesto = puesto;
@@ -19,6 +19,6 @@ export class Experiencia {
         this.url = url;
         this.empresa = empresa;
         this.esTrabajoActual = esTrabajoActual;
-        this.personaId = personaid;
+        this.personaid = personaid;
     }
 }

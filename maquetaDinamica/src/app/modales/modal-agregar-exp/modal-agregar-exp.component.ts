@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Experiencia } from 'src/app/entidades/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 
@@ -23,7 +22,7 @@ export class ModalAgregarExpComponent implements OnInit {
       url:[''],
       empresa:[''],
       esTrabajoActual :[''],     
-      personaid:[1],
+      personaId:[1],
    })
    }
 

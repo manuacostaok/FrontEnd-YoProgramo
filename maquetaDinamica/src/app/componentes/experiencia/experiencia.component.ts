@@ -17,7 +17,7 @@ constructor(private servExp:ExperienciaService){}
 
   
   cargarExperiencia():void{
-    this.servExp.lista().subscribe(data => {this.experiencias=data});    
+    this.servExp.lista().subscribe(data => {this.experiencias=data}); 
   }
 
 

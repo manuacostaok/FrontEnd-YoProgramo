@@ -9,7 +9,6 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit{
   experiencias: Experiencia[]=[];
-  idEditar! : number ;
 
 constructor(private servExp:ExperienciaService){}
   ngOnInit(): void {

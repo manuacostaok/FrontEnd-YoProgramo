@@ -15,8 +15,6 @@ const routes: Routes = [
   {path:'habilidades', component: HabilidadesComponent},
   {path:'proyectos', component: ProyectosComponent},
   {path:'**', component: Pagina404Component}
-  
-
 ];
 
 @NgModule({

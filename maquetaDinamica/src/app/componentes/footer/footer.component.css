@@ -1,8 +1,7 @@
 footer{
     color: #fefefe;
     font-size: 14px;
-    display: flex;
-    flex: column;
     text-align: center;
     box-shadow: 2px -2px 5px #999 ;
 }
+

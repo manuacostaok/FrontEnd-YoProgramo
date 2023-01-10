@@ -3,7 +3,7 @@
     font-family:Verdana,Helvetica;
     font-weight:bold;
     color:white;
-    background:#638cb5;
+    background:#000000;
     border:0px;
     width:200px;
     height: 30px;
@@ -24,10 +24,5 @@
     from {transform: translateY(2rem);opacity: 0}
     to {transform: translateY(0);opacity: 1}
   }
-  .row{
-    background-color: #a1b5cb;
-  }
-
-  .navbar{
-    padding: 0; 
-  }
+  
+  

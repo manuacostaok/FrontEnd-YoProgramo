@@ -1,6 +1,11 @@
-div{
-    background-color: #a1b5cb;
+#header{
+    color: #fefefe;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 2px -2px 5px #999 ;
 }
+
+
 
 app-social{
     float: right;

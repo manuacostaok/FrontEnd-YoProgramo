@@ -3,6 +3,6 @@ export class NuevoUsuario {
     nombreUsuario!:string;
     email!:string;
     password!:string;
-    autorities!:string[];
+    authorities!:string[];
 
 }

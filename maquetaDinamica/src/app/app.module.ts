@@ -28,6 +28,7 @@ import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sob
 import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { interceptorProvider } from './servicios/interceptor-service';
 
 
 @NgModule({
@@ -67,7 +68,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       innerStrokeColor: "#C7E596",
       animationDuration: 300,})
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

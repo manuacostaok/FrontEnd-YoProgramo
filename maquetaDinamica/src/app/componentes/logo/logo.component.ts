@@ -15,7 +15,7 @@ constructor(private router:Router, private tokenService: TokenService){}
     if(this.tokenService.getToken()){
       this.isLogged=true;
     }else{
-      this.isLogged=true;
+      this.isLogged=false;
     }
   }
 
@@ -25,7 +25,6 @@ constructor(private router:Router, private tokenService: TokenService){}
   }
 
   login(){
-    this.router.navigate(['/login'])
   }
 
 }

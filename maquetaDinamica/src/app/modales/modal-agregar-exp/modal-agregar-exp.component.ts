@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Experiencia } from 'src/app/entidades/experiencia';
 
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
@@ -11,24 +13,40 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ModalAgregarExpComponent implements OnInit {
   form:FormGroup;
-  
-  constructor(private formBuilder: FormBuilder, private sExperiencia: ExperienciaService) {
-     //Creamos el grupo de controles para el formulario 
-     this.form= this.formBuilder.group({
+  experiencia! :Experiencia;
+  constructor(private formBuilder: FormBuilder,
+              private sExperiencia: ExperienciaService,
+              private activatedRoute:ActivatedRoute,
+              private router:Router
+    ) { 
+      //Creamos el grupo de controles para el formulario 
+    this.form= this.formBuilder.group({
+      id:[''],
       puesto:['',[Validators.required]],
       inicio:[''],
       fin:[''],
-      descripcion:['',[Validators.required]],
+      descripcion:['', [Validators.required]],
       imagen:[''],
       url:[''],
       empresa:[''],
-      esTrabajoActual :[''],     
-      personaId:[1],
+      esTrabajoActual:[''],
+      personaId:1
    })
-   }
-
+    }
+  
+  
   ngOnInit(): void {
+    /*const id = this.activatedRoute.snapshot.params['id'];
+    this.sExperiencia.detail(id).subscribe(data => {
+      this.experiencia=data;
+    },err =>{
+      alert("Error al cargar datos");
+      this.router.navigate(['']);
+    }
+    )*/
   }
+
+  
 
   get Puesto(){
     return this.form.get("puesto");
@@ -38,29 +56,30 @@ export class ModalAgregarExpComponent implements OnInit {
     return this.form.get("descripcion");
   }
  
-  onCreate(): void{
-      this.sExperiencia.crear(this.form.value).subscribe(
-        data=>{
-          window.location.reload();
-          alert("Experiencia Añadida")
-    });
-  }
-
-  //, err =>{
-  //  alert("no se pudo eliminar la experiencia")
-  //}
   
-  limpiar(): void{
-    this.form.reset();
+
+
+  onUpdate():void{
+    this.sExperiencia.edit(this.form.value).subscribe(data => {
+      alert("Experiencia modificada.");
+      this.router.navigate(['']);
+      window.location.reload()
+    }
+    )
   }
 
   onEnviar(event:Event){
     event.preventDefault;
-    if(this.form.valid){
-      this.onCreate();
+    if (this.form.valid){
+      this.onUpdate();
     }else{
       alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
     }
   }
+
+  limpiar():void{
+    this.form.reset();
+  }
+  
 }

@@ -9,38 +9,35 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit{
-  skill: Habilidad[] = [];
-
-  constructor(private skillS: HabilidadService, private tokenService: TokenService) { }
   isLogged = false;
-  
+  habilidades: Habilidad[]=[]; //se llama al modelo que es un array
+
+  constructor(private tokenService: TokenService, private sHabilidad:HabilidadService) { }
+
   ngOnInit(): void {
-    this.cargarSkills();
+    this.cargarHabilidad();
     if(this.tokenService.getToken()){
       this.isLogged = true;
-    } else {
+    }else{
       this.isLogged = false;
     }
   }
 
-  cargarSkills(): void{
-    this.skillS.lista().subscribe(
-      data => {
-        this.skill = data;
-      }
-    )
+  cargarHabilidad():void{
+    this.sHabilidad.lista().subscribe(data => {
+      this.habilidades=data
+    });
   }
 
-  delete(id: number){
+  delete(id:number){
     if(id != undefined){
-      this.skillS.delete(id).subscribe(
-        data => {
-          this.cargarSkills();
-        }, err => {
-          alert("No se pudo borrar la skill");
-        }
-      )
-    }
-  }
+      this.sHabilidad.delete(id).subscribe(
+        data =>{
+          alert("Habilidad eliminada correctamente")
+          this.cargarHabilidad();
+        }, err =>{
+          alert("no se pudo eliminar la habilidad");
+        })
+    }}
 
 }

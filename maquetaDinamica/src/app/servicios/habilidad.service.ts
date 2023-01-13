@@ -7,28 +7,31 @@ import { Habilidad } from '../entidades/habilidad';
   providedIn: 'root'
 })
 export class HabilidadService {
-  URL='http://localhost:8080/habilidad/';
+  url='http://localhost:8080/habilidad/';
   
 
   constructor(private httpClient: HttpClient) { }
-
   public lista(): Observable<Habilidad[]>{
-    return this.httpClient.get<Habilidad[]>(this.URL + 'lista');
+    return this.httpClient.get<Habilidad[]>(this.url + 'lista');
   }
 
-  public detail(id: number): Observable<Habilidad>{
-    return this.httpClient.get<Habilidad>(this.URL + `detail/${id}`);
+  public listaPer(id: number): Observable<Habilidad[]>{
+    return this.httpClient.get<Habilidad[]>(this.url + `persona/${id}/lista`);
   }
 
-  public save(skill: Habilidad): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', skill);
+  public detail(id: number):Observable<Habilidad>{
+  return this.httpClient.get<Habilidad>(this.url + `detail/${id}`);  
   }
 
-  public update(id: number, skill: Habilidad): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, skill);
-  }
+  public save(Habilidad: Habilidad):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'create', Habilidad);
+    }
 
-  public delete(id: number): Observable<any>{
-    return this.httpClient.delete(this.URL + `delete/${id}`);
-  }
+  public edit(Habilidad: Habilidad):Observable<any>{
+      return this.httpClient.put<any>(this.url + 'update', Habilidad);
+      }
+
+  public delete(id: number):Observable<any>{
+    return this.httpClient.delete<any>(this.url + `delete/${id}`);
+    }
 }

@@ -10,9 +10,9 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class SobreMiComponent implements OnInit{
   persona:Persona;
-  isLogged:boolean = false;
-  constructor(private tokenService: TokenService,public personaService:PersonaService){
-  }
+  isLogged:boolean=false;
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+
   ngOnInit(): void {
     this.cargarPersona();
     if(this.tokenService.getToken()){
@@ -20,7 +20,7 @@ export class SobreMiComponent implements OnInit{
     }else{
       this.isLogged = false;
     }
-    }
+  }
   
   cargarPersona():void{
     this.personaService.detail(1).subscribe(data => 

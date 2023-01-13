@@ -7,7 +7,9 @@ import { IndexComponent } from './componentes/index/index.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { Pagina404Component } from './componentes/pagina404/pagina404.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { ModalEditarEduComponent } from './modales/modal-editar-edu/modal-editar-edu.component';
 import { ModalEditarExpComponent } from './modales/modal-editar-exp/modal-editar-exp.component';
+import { ModalEditarProyComponent } from './modales/modal-editar-proy/modal-editar-proy.component';
 import { ModalEditarSkillComponent } from './modales/modal-editar-skill/modal-editar-skill.component';
 import { ModalEditarSobreMiComponent } from './modales/modal-editar-sobre-mi/modal-editar-sobre-mi.component';
 import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
@@ -19,8 +21,9 @@ const routes: Routes = [
   {path:'login', component: LoginComponent },
   {path: 'editSobreMi/:id', component: ModalEditarSobreMiComponent},
   {path: 'editExperiencia/:id', component: ModalEditarExpComponent},
-  {path: 'editEducacion/:id', component: ModalEducacionComponent},
+  {path: 'editEducacion/:id', component: ModalEditarEduComponent},
   {path: 'editHabilidad/:id', component: ModalEditarSkillComponent},
+  {path: 'editProyecto/:id', component: ModalEditarProyComponent},
   {path:'experiencia', component: ExperienciaComponent},
   {path:'estudios', component: EducacionComponent},
   {path:'habilidades', component: HabilidadesComponent},

@@ -1,18 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/entidades/proyecto';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 
 @Component({
-  selector: 'app-modal-proyectos-add',
-  templateUrl: './modal-proyectos-add.component.html',
-  styleUrls: ['./modal-proyectos-add.component.css']
+  selector: 'app-modal-editar-proy',
+  templateUrl: './modal-editar-proy.component.html',
+  styleUrls: ['./modal-editar-proy.component.css']
 })
-export class ModalProyectosAddComponent implements OnInit {
-  form: FormGroup;
-  constructor(private formBuilder: FormBuilder, private sproye:ProyectoService) {
+export class ModalEditarProyComponent implements OnInit{
+  form:FormGroup;
+  proye :Proyecto = null;
+  constructor(private formBuilder: FormBuilder, 
+              private sProye:ProyectoService,
+              private activatedRoute:ActivatedRoute,
+              private router:Router
+  ) { 
     //Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
+      id:[''],
       proyecto:['',[Validators.required]],
       inicio:[''],
       fin:[''],
@@ -21,8 +28,7 @@ export class ModalProyectosAddComponent implements OnInit {
       url:[''],
       personaid:[1],
    })
-   }
-
+  }
   get Proyecto(){
     return this.form.get("proyecto");
   }
@@ -30,8 +36,6 @@ export class ModalProyectosAddComponent implements OnInit {
   get Descripcion(){
     return this.form.get("descripcion");
   }
- 
-
 
   get ProyectoValid(){
     return this.Proyecto.touched && !this.Proyecto.valid;
@@ -41,30 +45,35 @@ export class ModalProyectosAddComponent implements OnInit {
     return this.Descripcion.touched && !this.Descripcion.valid;
   }
 
-  
   ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.sProye.detail(id).subscribe(data => {
+      this.proye=data;
+    },err =>{
+      alert("Error al cargar datos");
+      this.router.navigate(['']);
+    }
+    )
   }
 
-
-  onCreate(): void{
-      this.sproye.save(this.form.value).subscribe(data=>{
-      alert("Proyecto Añadido");
-      window.location.reload();
-    });
-  }
-
-  limpiar(): void{
-    this.form.reset();
+  onUpdate():void{
+    this.sProye.edit(this.form.value).subscribe(data => {
+      alert("Proyecto modificado.");
+      this.router.navigate(['']);
+    }
+    )
   }
 
   onEnviar(event:Event){
     event.preventDefault;
     if (this.form.valid){
-      this.onCreate();
+      this.onUpdate();
     }else{
       alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
     }
   }
+  
 
+  
 }

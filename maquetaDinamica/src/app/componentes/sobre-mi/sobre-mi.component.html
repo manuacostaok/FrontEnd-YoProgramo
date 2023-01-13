@@ -1,4 +1,38 @@
-<section id="sobreMi" >
+<section id="sobreMi" class="sobreMi text-white mt-4">  
+
+  <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0" [ngClass]="{fondouser : isLogged}">
+    <!--<div class="position-absolute">        
+      <a href="#experiencia"><button class="btn btn-dark">Experiencia</button></a>
+      <a href="#educacion"><button class="btn btn-dark">Educacion</button></a>
+      <a href="#habilidades"><button class="btn btn-dark">Habilidades</button></a>
+      <a href="#proyectos"><button class="btn btn-dark">Proyectos</button></a>
+      <a href="#footer"><button class="btn btn-dark">Contacto</button></a>     
+    </div>!-->
+      
+      <img [src]="persona.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      
+      
+      <div class="row p-3">
+      <div class="col-3">
+        <img [src]="persona.img" class="rounded-circle profileImage w-50" alt="profileImage"> 
+       <!-- Button trigger modal -->  
+        <button type="button" *ngIf="isLogged" routerLink="editSobreMi/${{persona.Id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
+        <br>
+        <h4 class="nombrePerfil">{{persona.nombre}} {{persona.apellido}}</h4>
+        <h5 class="tituloPerfil">{{persona.titulo}}</h5>
+      </div>
+      <div class="col-8 text-md-start">
+        <h4 class="sobreMiPerfil">{{persona.sobreMi}}</h4>
+      </div>
+      <div class="col-1 p-0">        
+      </div>
+    </div>
+  </div>
+          </section>
+
+
+
+<!--<section id="sobreMi" >
 
   <div class="row">
     <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11">
@@ -31,4 +65,4 @@
     </div>
   </div>
     
-</section>
+</section>!-->

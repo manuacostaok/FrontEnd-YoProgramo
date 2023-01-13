@@ -30,7 +30,7 @@ export class ModalEditarSobreMiComponent implements OnInit{
    }
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id2'];
     this.sPersona.detail(1).subscribe(data => {
       this.perso=data;
     },err =>{

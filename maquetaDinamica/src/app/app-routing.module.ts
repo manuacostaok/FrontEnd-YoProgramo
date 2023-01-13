@@ -7,12 +7,18 @@ import { IndexComponent } from './componentes/index/index.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { Pagina404Component } from './componentes/pagina404/pagina404.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
+import { ModalEditarExpComponent } from './modales/modal-editar-exp/modal-editar-exp.component';
+import { ModalEditarSobreMiComponent } from './modales/modal-editar-sobre-mi/modal-editar-sobre-mi.component';
+import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
+
 
 //las rutas van ordenandas, al final va el error, primero el index 
 const routes: Routes = [
   {path:'', component: IndexComponent},
   {path:'login', component: LoginComponent },
+  {path: 'editSobreMi/:id', component: ModalEditarSobreMiComponent},
+  {path: 'editExperiencia/:id', component: ModalEditarExpComponent},
+  {path: 'editEducacion/:id', component: ModalEducacionComponent},
   {path:'experiencia', component: ExperienciaComponent},
   {path:'estudios', component: EducacionComponent},
   {path:'habilidades', component: HabilidadesComponent},

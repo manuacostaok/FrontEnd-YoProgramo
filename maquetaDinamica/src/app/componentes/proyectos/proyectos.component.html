@@ -1,5 +1,5 @@
-<section id="proyectos" class="proyectos text-black">
-  <div class="seccion container-fluid rounded shadow-sm p-3 mb-5 bg-body-transparent">
+<section id="proyectos" class="proyectos text-white">
+  <div class="seccion container-fluid rounded shadow-sm p-3  bg-body-transparent">
     <div class="row mb-2">
       <div class="col-auto me-auto mt-2">
         <h3>Proyectos
@@ -31,31 +31,19 @@
 <app-modal-proyectos-add></app-modal-proyectos-add>
     <div class="container text-center">
         <div class="card-group">
-                <div class="card">
-                  <img class="card-img-top" src="./../../../assets/img/bomberman.jpg" alt="Card image cap">
+                <div class="card" *ngFor="let proyecto of proyectos">
+                  <img class="card-img-top" [src]="proyecto.imagen" class="rounded-circle w-25 imgExp"  [alt]="proyecto.proyecto">
                   <div class="card-body">
-                    <h5 class="card-title">Juego Bomberman</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">{{proyecto.proyecto}}</h5>
+                    <p class="card-text">{{proyecto.descripcion}}.</p>
+                    <p class="card-text"><small class="text-muted">{{proyecto.inicio | date:"dd-MM-yyyy"}} {{proyecto.fin  | date:"dd-MM-yyyy"}}</small></p>
                   </div>
+                  <button type="submit"  class="btn btn-close-white" routerLink="editProyecto/{{proyecto.id}}"><i class="fa-solid fa-pencil" ></i></button>
+          
+                  <button type="submit"  class="btn btn-close-white" (click)="delete(proyecto.id)"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
-                <div class="card">
-                  <img class="card-img-top" src="./../../../assets/img/superMario.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Juego Super Mario</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top" src="./../../../assets/img/sega.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Juego Sonic</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
+                
+         </div>
     </div>
 </section>
 

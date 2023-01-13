@@ -1,4 +1,7 @@
-<section id="sobreMi" class="border">
+<section id="sobreMi" >
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11">
   
         <div class="row">
           <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -8,7 +11,7 @@
           </div>  
           <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
           
-            <h2 id="nombreee">{{persona.nombre}}{{persona.apellido}}</h2>
+            <h2 id="nombrePerfil">{{persona.nombre}}{{persona.apellido}}</h2>
             <h4>Programador Junior</h4>
             <p id="nombrePerfil">{{persona.nombre}}{{persona.apellido}}</p>
           </div>
@@ -20,8 +23,12 @@
                 <p>{{persona.sobreMi}}
                   umquam qui volupt?</p>
             </span>
-        </div>
+          </div>
       </div>
+    </div>
+    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+      <button type="button" *ngIf="isLogged" routerLink="editSobreMi/${{persona.Id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
+    </div>
+  </div>
     
 </section>
-<app-editar-sobre-mi></app-editar-sobre-mi>

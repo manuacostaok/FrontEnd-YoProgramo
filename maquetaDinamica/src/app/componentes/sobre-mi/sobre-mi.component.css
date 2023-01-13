@@ -1,18 +1,9 @@
-.btn{
-    font-size:10px;
-    font-family:Verdana,Helvetica;
-    font-weight:bold;
-    color:white;
-    background:#638cb5;
-    border:0px;
-    width:100px;
-    height: 30px;
-   }
+
 
    .row{
     padding: 20px;
-   }
-
+    margin-bottom: 3rem!important;
+}
    
    #sobreMi{
     color: #fefefe;

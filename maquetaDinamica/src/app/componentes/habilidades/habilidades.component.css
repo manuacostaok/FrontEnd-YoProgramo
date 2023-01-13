@@ -1,6 +1,7 @@
 .row{
     padding: 20px;
     text-align: center;
+    margin-bottom: 3rem!important;
 }
 
 #habilidades{
@@ -9,3 +10,4 @@
     text-align: center;
     box-shadow: 2px -2px 5px #999 ;
 }
+

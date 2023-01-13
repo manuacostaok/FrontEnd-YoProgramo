@@ -23,12 +23,14 @@ import { LogoutComponent } from './componentes/logout/logout.component';
 import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
-import { ModalEditarImgComponent } from './modales/modal-editar-img/modal-editar-img.component';
-import { EditarSobreMiComponent } from './componentes/editar-sobre-mi/editar-sobre-mi.component';
 import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { interceptorProvider } from './servicios/interceptor-service';
+import { ModalEditarSobreMiComponent } from './modales/modal-editar-sobre-mi/modal-editar-sobre-mi.component';
+import { ModalEditarExpComponent } from './modales/modal-editar-exp/modal-editar-exp.component';
+import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
+import { ModalEditarEduComponent } from './modales/modal-editar-edu/modal-editar-edu.component';
 
 
 @NgModule({
@@ -50,10 +52,12 @@ import { interceptorProvider } from './servicios/interceptor-service';
     ModalLoginComponent,
     BannerComponent,
     ModalLogoutComponent,
-    ModalEditarImgComponent,
-    EditarSobreMiComponent,
     ModalAgregarExpComponent,
-    ModalProyectosAddComponent
+    ModalProyectosAddComponent,
+    ModalEditarSobreMiComponent,
+    ModalEditarExpComponent,
+    ModalEducacionComponent,
+    ModalEditarEduComponent
   ],
   imports: [
     ReactiveFormsModule,

@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class ExperienciaComponent implements OnInit{
   isLogged:boolean = false;
-  experiencias: Experiencia[]=[]; 
+  experiencias: Experiencia[]=[]; //se llama al modelo que es un array
  
   constructor(private tokenService: TokenService, private sExperiencia: ExperienciaService) {  }
 
@@ -34,8 +34,9 @@ export class ExperienciaComponent implements OnInit{
         data =>{
           alert("Experiencia eliminada correctamente")
           this.cargarExperiencia();
+        }, err =>{
+          alert("no se pudo eliminar la experiencia")
         })
     }}
-  
 }
 

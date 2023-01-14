@@ -1,4 +1,17 @@
-.btn{
+
+
+.redes{
+  margin-right: 0.5em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes img{
+  margin: 0.2em;
+}
+
+
+.btn2{
     font-size:10px;
     font-family:Verdana,Helvetica;
     font-weight:bold;

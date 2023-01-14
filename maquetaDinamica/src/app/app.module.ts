@@ -34,6 +34,7 @@ import { ModalEditarEduComponent } from './modales/modal-editar-edu/modal-editar
 import { ModalAddSkillComponent } from './modales/modal-add-skill/modal-add-skill.component';
 import { ModalEditarSkillComponent } from './modales/modal-editar-skill/modal-editar-skill.component';
 import { ModalEditarProyComponent } from './modales/modal-editar-proy/modal-editar-proy.component';
+import { ModalRedAddComponent } from './modales/modal-red-add/modal-red-add.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { ModalEditarProyComponent } from './modales/modal-editar-proy/modal-edit
     ModalEditarEduComponent,
     ModalAddSkillComponent,
     ModalEditarSkillComponent,
-    ModalEditarProyComponent
+    ModalEditarProyComponent,
+    ModalRedAddComponent
   ],
   imports: [
     ReactiveFormsModule,

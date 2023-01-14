@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/entidades/persona';
@@ -12,10 +12,12 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 export class ModalEditarSobreMiComponent implements OnInit{
   form:FormGroup;
   perso:Persona;
+  
   constructor(private formBuilder: FormBuilder,
               private sPersona:PersonaService,
               private activatedRoute:ActivatedRoute,
-              private router:Router
+              private router:Router,
+              private cd:ChangeDetectorRef
     ) {
     //Creamos el grupo de controles para el formulario 
     this.form=this.formBuilder.group({
@@ -23,21 +25,26 @@ export class ModalEditarSobreMiComponent implements OnInit{
       nombre:['',[Validators.required]],
       apellido:['',[Validators.required]],
       img:['',[Validators.required]],
-      banner:['',[Validators.required]],
       sobreMi:['',[Validators.required]],
       titulo:['',[Validators.required]],
    })
    }
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.params['id2'];
-    this.sPersona.detail(1).subscribe(data => {
+    
+    const id = this.activatedRoute.snapshot.params['id'];
+    
+    this.sPersona.detail(id).subscribe(data => {
+      this.cd.detectChanges();
       this.perso=data;
+      
     },err =>{
-      alert("Error al cargar datos");
+      alert("Error al cargar datos en editar sobre mi");
       this.router.navigate(['']);
     }
     )
+    this.cd.detectChanges();
+
   }
 
   get Nombre(){

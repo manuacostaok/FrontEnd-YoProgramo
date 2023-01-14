@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/servicios/datos.service';
+import { Red } from 'src/app/entidades/red';
+import { RedService } from 'src/app/servicios/red.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,17 +10,22 @@ import { DatosService } from 'src/app/servicios/datos.service';
 })
 export class NavbarComponent implements OnInit{
     
-  redes:any;
-  mostrar = false;
-  constructor(private datos: DatosService){}
-  ngOnInit():void{
-      
-      
-    }
-  
+  redes :Red[]=[];
+  isLogged = false;
+  constructor(private tokenService: TokenService, private sRed:RedService) { }
 
-  mostrate():void{
-    this.mostrar=!this.mostrar;
+  ngOnInit(): void {
+   this.cargarHabilidad();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
+
+  cargarHabilidad():void{
+    this.sRed.lista().subscribe(data => {
+      this.redes=data});
   }
 
 

@@ -1,15 +1,28 @@
-<nav class="row navbar navbar-expand-lg ">
-    <div class="row container-fluid">
-      <div style="text-align: center;">
-        <div class="col-auto me-auto mt-2">
-          <a href="#experiencia"><button class="btn">Experiencia</button></a>
-          <!--faltan secciones-->
-          <a href="#estudios"><button class="btn">Estudios</button></a>
-          <a href="#habilidades"><button class="btn">Habilidades</button></a>
-          <a href="#proyectos"><button class="btn">Proyectos</button></a>
+<nav class="navbar navbar-expand rounded seccion ">
+    
+      <div >
+          <!--botonera con secciones-->
+          <a href="#experiencia"><button class="btn2">Experiencia</button></a>
+          <a href="#estudios"><button class="btn2">Estudios</button></a>
+          <a href="#habilidades"><button class="btn2">Habilidades</button></a>
+          <a href="#proyectos"><button class="btn2">Proyectos</button></a>
         </div>
+      
+      <!--redes y login   -->
+      <div class="col"> 
+        <div class="redes">   
+        <ul class="navbar-nav"> 
+          <div *ngFor="let red of redes">      
+            <li class="nav-item">
+              <a [href]="red.url" target="_blank"><img [src]="red.icono" class="rounded-circle w-25 " ></a>
+              
+            </li>        
+          </div>
+          <button type="submit" *ngIf="isLogged" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#RedesModalAdd"><i class="fa-solid fa-plus"></i></button>      
+        </ul>
+        
+      </div>         
       </div>
-      <br>
-                  
-    </div>
+    
   </nav>
+  <app-modal-red-add></app-modal-red-add>

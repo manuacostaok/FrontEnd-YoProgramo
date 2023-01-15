@@ -6,7 +6,7 @@
           <a href="#estudios"><button class="btn2">Estudios</button></a>
           <a href="#habilidades"><button class="btn2">Habilidades</button></a>
           <a href="#proyectos"><button class="btn2">Proyectos</button></a>
-        </div>
+      </div>
       
       <!--redes y login   -->
       <div class="col"> 
@@ -15,6 +15,7 @@
           <div *ngFor="let red of redes">      
             <li class="nav-item">
               <a [href]="red.url" target="_blank"><img [src]="red.icono" class="rounded-circle w-25 " ></a>
+              <button type="submit" *ngIf="isLogged" class="btn btn-close-white" (click)="delete(red.id)"><i class="fa-solid fa-trash-can"></i></button>
               
             </li>        
           </div>

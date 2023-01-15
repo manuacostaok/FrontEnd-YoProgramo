@@ -6,7 +6,7 @@
       </div>
             <div class="modal-body">
               <!-- formulario de perfil-->
-              <input type="hidden" formControlName="id" [ngModel]="perso?.Id">
+              <input type="hidden" formControlName="id" [ngModel]="perso?.id">
               <div class="mb-3">
                 <label for="perfilImg" class="form-label">Modificar imagen de perfil<span class="text-danger">*</span></label>
                 <input class="form-control" type="url" formControlName="img"  [ngModel]="perso?.img" [ngClass]="{'is-invalid': Img.errors && Img.touched, 'is-valid': !Img.errors && Img.touched}">

@@ -1,5 +1,5 @@
 export class Proyecto {
-    id!:number;
+    id:number;
     proyecto:string;
     inicio:string;
     fin:string;

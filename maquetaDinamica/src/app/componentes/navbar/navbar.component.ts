@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit{
   constructor(private tokenService: TokenService, private sRed:RedService) { }
 
   ngOnInit(): void {
-   this.cargarHabilidad();
+   this.cargarRed();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -23,10 +23,20 @@ export class NavbarComponent implements OnInit{
     }
   }
 
-  cargarHabilidad():void{
+  cargarRed():void{
     this.sRed.lista().subscribe(data => {
       this.redes=data});
   }
+  delete(id:number){
+    if(id != undefined){
+      this.sRed.delete(id).subscribe(
+        data =>{
+          alert("Red eliminado correctamente")
+          this.cargarRed();
+        }, err =>{
+          alert("no se pudo eliminar la Red")
+        })
+    }}
 
 
 }

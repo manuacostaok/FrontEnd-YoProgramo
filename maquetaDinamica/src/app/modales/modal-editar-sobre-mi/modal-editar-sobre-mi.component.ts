@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {  ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/entidades/persona';
@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class ModalEditarSobreMiComponent implements OnInit{
   form:FormGroup;
-  perso:Persona;
+  perso:Persona=null;
   
   constructor(private formBuilder: FormBuilder,
               private sPersona:PersonaService,
@@ -30,21 +30,17 @@ export class ModalEditarSobreMiComponent implements OnInit{
    })
    }
 
-  ngOnInit(): void {
-    
+   ngOnInit(): void {
+    this.cd.detectChanges();
     const id = this.activatedRoute.snapshot.params['id'];
-    
     this.sPersona.detail(id).subscribe(data => {
-      this.cd.detectChanges();
       this.perso=data;
-      
+      this.cd.detectChanges();
     },err =>{
       alert("Error al cargar datos en editar sobre mi");
       this.router.navigate(['']);
     }
     )
-    this.cd.detectChanges();
-
   }
 
   get Nombre(){
@@ -71,6 +67,7 @@ export class ModalEditarSobreMiComponent implements OnInit{
   }
 
   onUpdate():void{
+    this.cd.detectChanges();
     this.sPersona.edit(this.form.value).subscribe(data => {
       alert("Persona modificada.");
       this.router.navigate(['']);

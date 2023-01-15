@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Habilidad } from 'src/app/entidades/habilidad';
@@ -16,7 +16,8 @@ export class ModalEditarSkillComponent implements OnInit{
   constructor(private formBuilder: FormBuilder, 
     private sHabilidad:HabilidadService, 
     private activatedRoute:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private cd:ChangeDetectorRef
   ) { 
     //Creamos el grupo de controles para el formulario 
 this.form= this.formBuilder.group({
@@ -39,6 +40,7 @@ get Porcentaje(){
     const id = this.activatedRoute.snapshot.params['id'];
     this.sHabilidad.detail(id).subscribe(data => {
       this.habi=data;
+      this.cd.detectChanges();
     },err =>{
       alert("Error al cargar datos");
       this.router.navigate(['']);

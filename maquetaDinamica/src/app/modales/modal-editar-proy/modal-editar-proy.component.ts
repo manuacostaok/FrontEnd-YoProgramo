@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/entidades/proyecto';
@@ -15,7 +15,8 @@ export class ModalEditarProyComponent implements OnInit{
   constructor(private formBuilder: FormBuilder, 
               private sProye:ProyectoService,
               private activatedRoute:ActivatedRoute,
-              private router:Router
+              private router:Router,
+              private cd:ChangeDetectorRef
   ) { 
     //Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
@@ -49,6 +50,7 @@ export class ModalEditarProyComponent implements OnInit{
     const id = this.activatedRoute.snapshot.params['id'];
     this.sProye.detail(id).subscribe(data => {
       this.proye=data;
+      this.cd.detectChanges();
     },err =>{
       alert("Error al cargar datos");
       this.router.navigate(['']);

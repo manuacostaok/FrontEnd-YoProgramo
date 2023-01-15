@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Estudio } from 'src/app/entidades/estudio';
@@ -14,7 +14,8 @@ export class ModalEditarEduComponent implements OnInit {form:FormGroup;
   constructor(private formBuilder: FormBuilder, 
               private sEstudio:EstudioService, 
               private activatedRoute:ActivatedRoute,
-              private router:Router
+              private router:Router,
+              private cd:ChangeDetectorRef
               ) { 
     //Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
@@ -34,6 +35,7 @@ export class ModalEditarEduComponent implements OnInit {form:FormGroup;
     const id = this.activatedRoute.snapshot.params['id'];
     this.sEstudio.detail(id).subscribe(data => {
       this.estu=data;
+      this.cd.detectChanges();
     },err =>{
       alert("Error al cargar datos");
       this.router.navigate(['']);

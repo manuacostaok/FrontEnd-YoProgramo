@@ -1,12 +1,14 @@
 
 
-.redes{
+
+
+.img{
   margin-right: 0.5em;
   flex-direction: column;
   align-items: center;
 }
 
-.redes img{
+.img{
   margin: 0.2em;
 }
 

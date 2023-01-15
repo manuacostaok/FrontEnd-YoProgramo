@@ -1,6 +1,6 @@
 export class Estudio {
 
-    id!: number;
+    id: number;
     estudio : string;
     inicio : string;
     fin : string;

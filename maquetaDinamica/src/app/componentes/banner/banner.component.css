@@ -128,8 +128,8 @@ p {
 }
 
 .planet {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     z-index: 1;
     background-image: url(/assets/img/planet-remix.svg);
     background-position: center;
@@ -138,7 +138,7 @@ p {
     position: absolute;
     box-shadow: -4px 2px 56px #f9c05f;
     left: 20%;
-    top: 46%;
+    top: 36%;
     transform: translate(-50%, -50%);
     animation: orbit2 15s linear infinite;
 }
@@ -207,29 +207,7 @@ p {
     }
 }
 
-.cometa {
-    height: 250px;
-    width: 250px;
-    z-index: 4;
-    background-image: url(/assets/img/cometa.svg);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    left: 90%;
-    top: 36%;
-    transform: translate(-50%, -50%) ;
-    animation: cometa 10s circle infinite;
-}
 
-@keyframes cometa {
-    from {
-        transform: rotate(0deg)translateX(0px) rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg)translateX(350px) rotate(-360deg);
-    }
-}
 
 
 

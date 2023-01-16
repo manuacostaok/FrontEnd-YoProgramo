@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'editHabilidad/:id', component: ModalEditarSkillComponent},
   {path: 'editProyecto/:id', component: ModalEditarProyComponent},
   {path:'experiencia', component: ExperienciaComponent},
-  {path:'estudios', component: EducacionComponent},
+  {path:'educacion', component: EducacionComponent},
   {path:'habilidades', component: HabilidadesComponent},
   {path:'proyectos', component: ProyectosComponent},
   {path:'**', component: Pagina404Component}

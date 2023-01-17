@@ -1,0 +1,14 @@
+.modal-dialog,.modal-content,.modal-header{
+    background-color: rgb(0, 0, 0);
+}
+
+label{
+    color: aliceblue;
+}
+.modal-title{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+

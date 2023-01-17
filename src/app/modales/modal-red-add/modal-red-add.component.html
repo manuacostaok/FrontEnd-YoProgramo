@@ -3,7 +3,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Agregar Red</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+          <button type="button"  data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
         <!-- formulario de Red-->
         <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="RedesForm"> 
@@ -46,8 +46,8 @@
 
               </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
-                  <button type="submit" class="btn btnLogin">Agregar</button>
+                  <button type="button" class="btn btn-dark" (click)="limpiar()">Limpiar</button>
+                  <button type="submit" class="btn btnLogin btn-dark">Agregar</button>
                 </div>
               </form>
             </div>

@@ -3,7 +3,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="educacionModalAdd">Agregar Educación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+          <button type="button" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
         <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm"> 
         <div class="modal-body">
@@ -51,8 +51,8 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
-                <button type="submit" class="btn btnLogin">Agregar</button>
+                <button type="button" class="btn btn-dark" (click)="limpiar()">Limpiar</button>
+                <button type="submit" class="btn btnLogin btn-dark">Agregar</button>
               </div>
             </form>
             </div>

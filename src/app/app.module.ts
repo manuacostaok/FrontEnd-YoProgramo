@@ -19,10 +19,8 @@ import { Pagina404Component } from './componentes/pagina404/pagina404.component'
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { LogoutComponent } from './componentes/logout/logout.component';
 import { ModalLoginComponent } from './modales/modal-login/modal-login.component';
 import { BannerComponent } from './componentes/banner/banner.component';
-import { ModalLogoutComponent } from './modales/modal-logout/modal-logout.component';
 import { ModalAgregarExpComponent } from './modales/modal-agregar-exp/modal-agregar-exp.component';
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -52,10 +50,8 @@ import { ModalRedAddComponent } from './modales/modal-red-add/modal-red-add.comp
     ProyectosComponent,
     SobreMiComponent,
     LoginComponent,
-    LogoutComponent,
     ModalLoginComponent,
     BannerComponent,
-    ModalLogoutComponent,
     ModalAgregarExpComponent,
     ModalProyectosAddComponent,
     ModalEditarSobreMiComponent,

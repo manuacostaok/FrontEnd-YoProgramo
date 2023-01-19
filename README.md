@@ -1,3 +1,3 @@
-# MaquetaDinamica
-Este proyecto es un portafolio dinamico, que previamente fue realizado en una maqueta estatica, se realizo bajo las indicaciones del curso de argentina programa 3. 
+# FrontEndDinamico
+Este proyecto es un portafolio dinamico realizado con angular, previamente fue realizado en una maqueta estatica, se realizo bajo las indicaciones del curso de argentina programa 3. 
 

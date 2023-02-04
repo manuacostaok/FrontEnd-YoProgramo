@@ -25,7 +25,7 @@ export class ModalEditarSobreMiComponent implements OnInit{
       nombre:['',[Validators.required]],
       apellido:['',[Validators.required]],
       img:['',[Validators.required]],
-      sobreMi:['',[Validators.required]],
+      sobreMi:['',[Validators.required,Validators.minLength(20)]],
       titulo:['',[Validators.required]],
    })
    }

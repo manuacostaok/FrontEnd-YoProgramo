@@ -1,0 +1,135 @@
+footer{
+    color: #fefefe;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 2px -2px 5px #999 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.ufo {
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    background-image: url(/assets/img/ufo.svg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: rocket 13s ease-in-out infinite;
+}
+@keyframes rocket {
+    0% {
+        transform: translateX(180px)translate(-50%, -50%) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(200px)translate(-50%, -50%) rotate(0deg)
+    }
+
+    100% {
+        transform: translateY(-300px)translate(-50%, -50%) rotate(0deg)
+    }
+
+    
+}
+.cometa {
+    height: 250px;
+    width: 250px;
+    z-index: 4;
+    background-image: url(/assets/img/cometa.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 90%;
+    top: 36%;
+    transform: translate(-50%, -50%) ;
+    animation: cometa 10s circle infinite;
+}
+
+@keyframes cometa {
+    from {
+        transform: rotate(0deg)translateX(0px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)translateX(350px) rotate(-360deg);
+    }
+}
+.moon{
+    margin-bottom: 50px;
+    margin-top: 120px;
+    background-image: url(/assets/img/rg1024-Moon-in-comic-style.svg);
+    background-size: 2500px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    height: 500px;
+    transition: 10s ease;
+    animation-name: moon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    box-shadow: 1px -17px 11px 5px rgba(199, 193, 209, 0.75);
+-webkit-box-shadow: 1px -17px 11px 5px rgba(225, 220, 233, 0.75);
+-moz-box-shadow: 1px -17px 11px 5px rgba(249, 246, 253, 0.75);
+}
+
+img{
+    width: 70px;
+}
+
+.linkcontainer{
+    margin-top: 50px;
+}
+
+a{
+    margin: 10px;
+}
+
+.copyrightcontainer{
+    margin-top:70px;
+}
+
+.copyright{
+    font-size: 20px;
+}
+
+
+@keyframes  moon{
+    0%{
+        translate: 0 30px;
+    }
+    50%{
+        translate: 0 -20px;
+    }
+    100%{
+        translate: 0 30px;
+    }
+}
+
+p{
+    color: black;
+    font-size: 1.75rem;
+    letter-spacing: 0.13rem;
+}
+h2{
+    margin-top: 100px;
+    display: block;
+    color: black;
+    font-size: 5.625rem;
+}
+
+.container{
+    flex-direction: column;
+    width: 100%;
+}
+
+  

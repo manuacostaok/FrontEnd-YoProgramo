@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="container">
+    <div class="logo">
+        <a title="logoAp" href="https://argentinaprograma.inti.gob.ar"><img src="./../../../assets/img/APLogo.png"  id="logoAP" /></a>
+    </div>
+    <div class="redes">
+        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal" (click)="login()" *ngIf="!isLogged">Ingreso</button>
+        <button type="button"  class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
+    </div>
+    <!--<div class="redes">    
+        <a href="https://github.com/manuacostaok"><img src="../../../assets/img/github.png" alt="github"></a>
+        <a href=""><img src="../../../assets/img/linkedin.png" alt="linkedin"></a>
+        
+    </div>!-->
+</div>
+</div>
+<app-modal-login></app-modal-login>
+
+<!--<img href="https://argentinaprograma.inti.gob.ar" src="./../../../assets/img/APLogo.png"  login()        onLogOut()                     id="logoAP"/>!-->
+<!--<img src="./../../../assets/img/APLogo.png" id="logoAP"/>!-->

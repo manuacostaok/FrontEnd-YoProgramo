@@ -1,0 +1,44 @@
+
+
+   .row{
+    padding: 20px;
+    margin-bottom: 3rem!important;
+}
+   
+   #sobreMi{
+    color: #fefefe;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 2px -2px 5px #999 ;
+}
+   @media(min-width:576px){
+    #fotoPerfil{
+        position: absolute;
+        width: 17%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        top: -474px;
+    }
+   }
+   @media(max-width:575px){
+    #fotoPerfil{
+        position: absolute;
+        width: 34%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 33%;
+        top: -350px;
+    }
+   }
+
+   #fotoPerfil{
+    font-weight: bold;
+    margin-top: 30%;
+   }
+
+   #nombrePerfil{
+    font-weight: bold;
+    margin-top: 40%;
+    margin-left: 10px;
+   }

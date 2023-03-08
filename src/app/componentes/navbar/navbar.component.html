@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand rounded seccion ">
+    
+      <div >
+          <!--botonera con secciones-->
+          <a href="#experiencia"><button class="btn2">Experiencia</button></a>
+          <a href="#educacion"><button class="btn2">Estudios</button></a>
+          <a href="#habilidades"><button class="btn2">Habilidades</button></a>
+          <a href="#proyectos"><button class="btn2">Proyectos</button></a>
+      </div>
+      
+      <!--redes y login   -->
+      <div class="col"> 
+        <div class="redes">   
+        <ul class="navbar-nav"> 
+          <div *ngFor="let red of redes">      
+            <li class="nav-item">
+              <a [href]="red.url" target="_blank"><img [src]="red.icono" class="rounded-circle w-25 " ></a>
+              <button type="submit" *ngIf="isLogged" class="btn btn-close-white" (click)="delete(red.id)"><i class="fa-solid fa-trash-can"></i></button>
+              
+            </li>        
+          </div>
+          <button type="submit" *ngIf="isLogged" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#RedesModalAdd"><i class="fa-solid fa-plus"></i></button>      
+        </ul>
+        
+      </div>         
+      </div>
+    
+  </nav>
+  <app-modal-red-add></app-modal-red-add>

@@ -1,0 +1,19 @@
+#header{
+    color: #fefefe;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 2px -2px 5px #999 ;
+    box-shadow: 1px -17px 11px 5px rgba(199, 193, 209, 0.75);
+    -webkit-box-shadow: 1px -17px 11px 5px rgba(225, 220, 233, 0.75);
+    -moz-box-shadow: 1px -17px 11px 5px rgba(249, 246, 253, 0.75);
+}
+
+
+
+app-social{
+    float: right;
+    margin-top: auto;
+    
+}
+
+

@@ -1,0 +1,250 @@
+img{
+    width: auto;
+    height: auto;
+}
+
+.img-thumbnail{
+    padding: 0em;
+    border: 0;
+}
+
+
+
+#banner2{
+    background-image: url(/assets/img/fondo.jpg);
+    box-shadow: 1px 0px 5px rgba(199, 193, 209, 0.75);
+    -webkit-box-shadow: 1px  0px  5px rgba(225, 220, 233, 0.75);
+    -moz-box-shadow: 1px   5px rgba(249, 246, 253, 0.75);
+}
+
+
+
+* {
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+
+.presentation {
+    color: white;
+}
+
+h1,
+h2 {
+    z-index: 3000;
+    font-size: 5.625rem;
+}
+
+.bio {
+    color: black;
+}
+
+.myname {
+    background: linear-gradient(153deg, rgba(33, 83, 196, 1) 0%, rgba(116, 29, 255, 1) 75%);
+    background-clip:border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@keyframes image {
+    0% {
+        translate: 0 -15px;
+    }
+
+    50% {
+        translate: 0 30px;
+    }
+
+    100% {
+        translate: 0 -15px;
+    }
+}
+
+p {
+    color: black;
+    font-size: 1.75rem;
+    letter-spacing: 0.13rem;
+}
+
+
+@keyframes moon {
+    0% {
+        translate: 0 30px;
+    }
+
+    50% {
+        translate: 0 -20px;
+    }
+
+    100% {
+        translate: 0 30px;
+    }
+}
+
+.planet {
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    background-image: url(/assets/img/planet-remix.svg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: -4px 2px 56px #f9c05f;
+    left: 20%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+    animation: orbit2 15s linear infinite;
+}
+
+@keyframes orbit2 {
+    from {
+        transform: rotate(0deg)translateX(350px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)translateX(350px) rotate(-360deg);
+    }
+}
+
+.rocket {
+    height: 250px;
+    width: 250px;
+    z-index: 4;
+    background-image: url(/assets/img/starting-rocket.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    filter: drop-shadow(-4px 2px 56px #f9c05f);
+    left: 90%;
+    top: 56%;
+    transform: translate(-50%, -50%) rotate(-80deg);
+    animation: rocket 10s ease-in-out infinite;
+}
+
+@keyframes rocket {
+    0% {
+        transform: translateY(100px)translate(-50%, -50%) rotate(-70deg)
+    }
+
+    50% {
+        transform: translateY(-40px)translate(-50%, -50%) rotate(-80deg)
+    }
+
+    100% {
+        transform: translateY(100px)translate(-50%, -50%) rotate(-70deg)
+    }
+}
+
+.tierra {
+    height: 250px;
+    width: 250px;
+    z-index: 4;
+    background-image: url(/assets/img/tierra.svg);
+    background-position: center;
+    background-size: cover;
+    
+    filter: drop-shadow(-4px 2px 56px #f9c05f);
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%) rotate(-80deg);
+    animation: tierra 10s ease-in-out infinite;
+}
+
+@keyframes tierra {
+    from {
+        transform: rotate(0deg)translateX(350px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)translateX(350px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1600px) {
+    .rocket {
+        transform: translate(-100%, 230%) rotate(-80deg);
+    }
+
+    @keyframes rocket {
+        0% {
+            transform: translateY(100px)translate(-100%, 230%) rotate(-70deg)
+        }
+
+        50% {
+            transform: translateY(-40px)translate(-100%, 230%) rotate(-80deg)
+        }
+
+        100% {
+            transform: translateY(100px)translate(-100%, 230%) rotate(-70deg)
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .colbioimg {
+        text-align: center;
+    }
+
+    .presentation {
+        text-align: center;
+    }
+
+    .planet {
+        left: 40%;
+        top: 36%;
+        animation: orbit2 6s linear infinite;
+    }
+
+    @keyframes orbit2 {
+        from {
+            transform: rotate(0deg)translateX(150px) rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg)translateX(150px) rotate(-360deg);
+        }
+    }
+
+    .rocket {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 90px;
+    }
+
+    .planet {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (max-width: 386px) {
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    h1,
+    h2 {
+        font-size: 4.3rem;
+    }
+}

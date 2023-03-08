@@ -1,0 +1,20 @@
+#proyectos{
+    color: #fefefe;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 2px -2px 5px #999 ;
+}
+.row{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.card,.card-group{
+    margin:3rem;
+}
+
+.card-body{
+    background-color: black;
+
+}

@@ -1,13 +1,13 @@
-[debug] [2023-08-09T04:11:05.240Z] ----------------------------------------------------------------------
-[debug] [2023-08-09T04:11:05.242Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2023-08-09T04:11:05.243Z] CLI Version:   11.24.0
-[debug] [2023-08-09T04:11:05.243Z] Platform:      win32
-[debug] [2023-08-09T04:11:05.243Z] Node Version:  v18.12.1
-[debug] [2023-08-09T04:11:05.245Z] Time:          Wed Aug 09 2023 01:11:05 GMT-0300 (hora estándar de Argentina)
-[debug] [2023-08-09T04:11:05.245Z] ----------------------------------------------------------------------
+[debug] [2023-08-23T00:15:43.037Z] ----------------------------------------------------------------------
+[debug] [2023-08-23T00:15:43.040Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-23T00:15:43.040Z] CLI Version:   11.24.0
+[debug] [2023-08-23T00:15:43.041Z] Platform:      win32
+[debug] [2023-08-23T00:15:43.041Z] Node Version:  v18.12.1
+[debug] [2023-08-23T00:15:43.042Z] Time:          Tue Aug 22 2023 21:15:43 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-08-23T00:15:43.043Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-08-09T04:11:05.328Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-08-09T04:11:05.329Z] > authorizing via signed-in user (manuacostaok@gmail.com)
+[debug] [2023-08-23T00:15:43.145Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-23T00:15:43.146Z] > authorizing via signed-in user (manuacostaok@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -30,15 +30,10 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[debug] [2023-08-09T04:11:16.257Z] Using project from CLI flag: portfoliomanuacosta
-[debug] [2023-08-09T04:11:16.259Z] > refreshing access token with scopes: []
-[debug] [2023-08-09T04:11:16.262Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-08-09T04:11:16.262Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-09T04:11:16.486Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-08-09T04:11:16.486Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-08-09T04:11:16.497Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfoliomanuacosta [none]
-[debug] [2023-08-09T04:11:16.864Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfoliomanuacosta 200
-[debug] [2023-08-09T04:11:16.864Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfoliomanuacosta {"projectId":"portfoliomanuacosta","projectNumber":"606631947880","displayName":"PortfolioManuAcosta","name":"projects/portfoliomanuacosta","resources":{"hostingSite":"portfoliomanuacosta"},"state":"ACTIVE","etag":"1_7f2ab6f1-0d01-468e-b06f-2fd57a807d2c"}
+[debug] [2023-08-23T00:16:11.219Z] Using project from CLI flag: portfoliomanuacosta
+[debug] [2023-08-23T00:16:11.223Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfoliomanuacosta [none]
+[debug] [2023-08-23T00:16:11.656Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfoliomanuacosta 200
+[debug] [2023-08-23T00:16:11.657Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfoliomanuacosta {"projectId":"portfoliomanuacosta","projectNumber":"606631947880","displayName":"PortfolioManuAcosta","name":"projects/portfoliomanuacosta","resources":{"hostingSite":"portfoliomanuacosta"},"state":"ACTIVE","etag":"1_7f2ab6f1-0d01-468e-b06f-2fd57a807d2c"}
 [info] i  Using project portfoliomanuacosta (PortfolioManuAcosta) 
 [info] 
 === Hosting:github Setup
@@ -47,6 +42,6 @@ Before we get started, keep in mind:
 [info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
 [info] 
 [info] Visit this URL on this device to log in:
-[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=1058356837&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=246842489&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
 [info] 
 [info] Waiting for authentication...

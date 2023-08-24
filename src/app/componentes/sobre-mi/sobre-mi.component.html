@@ -15,13 +15,10 @@
                 <h5 class="tituloPerfil">{{persona?.titulo}}</h5>
             </div>
           <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-            
                 <h4 class="sobreMiPerfil">{{persona?.sobreMi}}</h4>
-            
+                <a download="cvAcostaManuel.pdf" href="src/assets/js/cv.pdf" class="btn btn-dark">&#68;escargar mi cv</a>
           </div>
-          
         </div>
-        
       </div>
       <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">  
         <button type="button" *ngIf="isLogged" routerLink="editSobreMi/{{persona?.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil" ></i></button>
